@@ -470,7 +470,7 @@ class Cooccur {
     }
 
     public static void main(String[] args)throws FileNotFoundException, IOException {
-        if (args.length < 10) {
+        if (args.length < 6) {
             System.out.println("usage: java Cooccur <input text file (each line a document)> <output file path> <head %-le> <tail %-le> <alpha> <usePosition><UseContext><Context FilePath> <Final OutputFile Path><alpha>");
             return;
         }
@@ -479,15 +479,17 @@ class Cooccur {
         float headp = Float.parseFloat(args[2]) / 100;
         float tailp = Float.parseFloat(args[3]) / 100;
         Boolean usePositions = Boolean.parseBoolean(args[5]);
-				Boolean useContext = Boolean.parseBoolean(args[6]);
-        
-				String contextFilePath = args[7];
-        String finalOutputFile = args[8];
-				double alpha = Double.parseDouble(args[9]);
 				Cooccur c = new Cooccur(inputFile, oFile, headp, tailp);
-        c.compute(Float.parseFloat(args[4]), usePositions);
-				if(useContext){
-        	c.modifyCooccurGraph(alpha,contextFilePath,oFile,finalOutputFile);
- 				}
+        c.compute(Float.parseFloat(args[4]), usePositions);		
+				if(args.length > 6)
+				{
+					Boolean useContext =	Boolean.parseBoolean(args[6]);
+					String contextFilePath = args[7];
+        	String finalOutputFile = args[8];
+					double alpha = Double.parseDouble(args[9]);
+					if(useContext){
+          	c.modifyCooccurGraph(alpha,contextFilePath,oFile,finalOutputFile);
+        	}
+				}
    	}
 }
