@@ -1,4 +1,5 @@
 #!/bin/bash
+
   
 if [ $# -lt 2 ]
 then
@@ -24,4 +25,4 @@ then
 #	./word2svec -train $DATA_FILE -size $DIM -cbow 0 -output $WVEC_FILE -iter 3 -ns 5 -window 10   
 fi
 
-./node2vec_doc -train ${GRAPH_FILE} -output $CTXT_WVEC_FILE -pt ${WVEC_FILE}.bin -size $DIM -trace 3 -window $WINDOW -alpha .01 -iter 2 -negative 5 -p1 0.5 -q1 0.5  
+./node2vec -train ${GRAPH_FILE} -output $CTXT_WVEC_FILE -pt ${WVEC_FILE}.bin -size $DIM -trace 3 -window $WINDOW -alpha .01 -iter 2 -negative 5 -p1 0.5 -q1 0.5  
