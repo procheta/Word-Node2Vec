@@ -8,17 +8,14 @@ then
 fi
 
 DATA_DIR=$PWD/data_node2vec/
-DIM=200
-WINDOW=5
+DIM=$1
+WINDOW=$2
 DATA_FILE=$DATA_DIR/dbpedia.subset.txt.100000
-#WVEC_FILE=$DATA_DIR/dbpedia.sgns.${DIM}
-WVEC_FILE=/home/procheta/AolTemporalWithoutStem
+WVEC_FILE=$DATA_DIR/dbpedia.sgns.${DIM}
 CTXT_WVEC_FILE=$DATA_DIR/dbpedia.cwvec12.$DIM
 
 #To generalize, write a script to generate the graph
-#GRAPH_FILE=/home/procheta/Cooccurance/output_0.5.txt.s
-#GRAPH_FILE=/home/procheta/output.txt
-GRAPH_FILE=/home/procheta/trialGraphUniform.txt
+GRAPH_FILE=$DATA_DIR/mat.txt.s.20k
 if [ ! -e $WVEC_FILE ]
 then
 	echo "Training word vectors "
