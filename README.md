@@ -14,3 +14,10 @@ run_node2vec.sh will give the word emedding based on the co-occurance statistics
 Example
 
 ./run_node2vec.sh 200 5 
+
+
+Evaluation Script:
+
+We used the following evaluation package for embedding 
+
+git clone https://github.com/kudkudak/word-embeddings-benchmarks.git
