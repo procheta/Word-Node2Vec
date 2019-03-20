@@ -1,0 +1,2 @@
+run_cooccur.sh will give the co-occurance sstatistics for a sample corpas
+run_node2vec.sh will give the word emedding based on the co-occurance statistics.
