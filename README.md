@@ -10,3 +10,7 @@ Example
 
 
 run_node2vec.sh will give the word emedding based on the co-occurance statistics.
+
+Example
+
+./run_node2vec.sh cooccur.txt
