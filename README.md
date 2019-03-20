@@ -6,11 +6,11 @@ run_cooccur.sh will give the co-occurance sstatistics for a sample corpus.
 
 Example
 
-./run_cooccur.sh wikitextSample.txt cooccur.txt 5 90 0.5  false
+./run_cooccur.sh data_node2vec/dbpedia.subset.txt.100000 cooccur.txt 5 90 0.5  false
 
 
 run_node2vec.sh will give the word emedding based on the co-occurance statistics.
 
 Example
 
-./run_node2vec.sh cooccur.txt
+./run_node2vec.sh 200 5 
