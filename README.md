@@ -16,7 +16,7 @@ run_node2vec.sh will give the word emedding based on the co-occurance statistics
 ./run_node2vec.sh 200 5 
 
 
-**Evaluation Script:
+**Evaluation Script:**
 
 We used the following evaluation package for embedding 
 
