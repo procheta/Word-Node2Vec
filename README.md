@@ -19,7 +19,7 @@ The implemenation of embedding the nodes is largely adapted from Mikolov's C cod
 
 The input to this step is a collection of documents as a single text file, each line representing a document. For convenience, we provide a script which can be invoked as
 ```
-run_cooccur.sh <list of arguments>
+run_coccur.sh <list of arguments>
 ```
 which takes a list of arguments and writes out an edge list file.
 
@@ -30,10 +30,10 @@ which takes a list of arguments and writes out an edge list file.
 <usePosition><UseContext> <Context FilePath> <Final OutputFile Path><alpha>
 5. `<usePosition>`: whether to decay the contributions of co-occurrences between words pairs that are far apart.
 
-A sample invocation of `run_cooccur.sh` is shown below.
+A sample invocation of `run_coccur.sh` is shown below.
 
 ```
-./run_cooccur.sh data_node2vec/dbpedia.subset.txt.100000 cooccur.txt 5 90 0.5 false
+./run_coccur.sh data_node2vec/dbpedia.subset.txt.100000 cooccur.txt 5 90 0.5 false
 ```
 
 
