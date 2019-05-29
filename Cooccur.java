@@ -114,13 +114,11 @@ class Vocab {
         int maxCutOff = (int) (maxTf * tailp);
 
         System.out.println("Removing words with freq lower than " + minCutOff + " and higher than " + maxCutOff);
-	HashSet<String> words =  findUniqueWord();
-        System.out.println(words);
 	Iterator<Map.Entry<String, TermFreq>> iter = termIdMap.entrySet().iterator();
         while (iter.hasNext()) {
             Map.Entry<String, TermFreq> entry = iter.next();
             TermFreq tf = entry.getValue();
-            if ((tf.freq <= minCutOff || tf.freq >= maxCutOff) && !words.contains(getTerm(tf.termId))  ) {
+            if ((tf.freq <= minCutOff || tf.freq >= maxCutOff) ) {
 	       //if ((tf.freq <= minCutOff || tf.freq >= maxCutOff) ) {
    			//System.out.println(words.contains(getTerm(tf.termId)));
                         //System.out.println(getTerm(tf.termId));
