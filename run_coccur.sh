@@ -1,5 +1,5 @@
 #!/bin/bash
-
+javac Coccur.java
 if [ $# -lt 6 ]
 then
         echo "Usage: $0 <document file (each doc in a line)><output file path> <head %-le> <tail %-le> <alpha> <usePosition><UseContext><Context FilePath> <Final OutputFile Path><alpha>"
