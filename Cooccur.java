@@ -166,7 +166,7 @@ class CooccurStats {
     String encode(Vocab v) {
         String astr = v.getTerm(a.termId);
         String bstr = v.getTerm(b.termId);
-        return String.format("%s\t%s\t%.4f\t%d\t%d", astr, bstr, p,count,count_window);
+        return String.format("%s\t%s\t%.4f", astr, bstr, p);
     }
 
     void normalize(Vocab v, float alpha) {
